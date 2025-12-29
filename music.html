@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Music Player UI</title>
+
+<style>
+*{
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body{
+  margin:0;
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+}
+
+.player{
+  width:340px;
+  padding:20px;
+  border-radius:20px;
+  background:rgba(255,255,255,0.12);
+  backdrop-filter:blur(12px);
+  color:#fff;
+  box-shadow:0 15px 40px rgba(0,0,0,0.4);
+}
+
+.album{
+  height:200px;
+  border-radius:14px;
+  background:linear-gradient(135deg,#ff512f,#dd2476);
+  margin-bottom:15px;
+  position:relative;
+}
+
+.now-playing{
+  position:absolute;
+  bottom:10px;
+  left:10px;
+  font-size:12px;
+  background:rgba(0,0,0,0.5);
+  padding:4px 10px;
+  border-radius:20px;
+}
+
+.song{
+  text-align:center;
+}
+
+.song h3{
+  margin:8px 0 4px;
+  font-size:20px;
+}
+
+.song p{
+  margin:0;
+  opacity:.75;
+  font-size:14px;
+}
+
+.time{
+  display:flex;
+  justify-content:space-between;
+  font-size:12px;
+  margin-top:15px;
+  opacity:.85;
+}
+
+.progress{
+  height:6px;
+  background:rgba(255,255,255,.3);
+  border-radius:10px;
+  margin:6px 0 10px;
+  overflow:hidden;
+}
+
+.progress span{
+  width:48%;
+  height:100%;
+  display:block;
+  background:#fff;
+}
+
+.controls{
+  display:flex;
+  justify-content:space-around;
+  align-items:center;
+  margin-top:10px;
+}
+
+.btn{
+  width:45px;
+  height:45px;
+  border-radius:50%;
+  background:rgba(255,255,255,.2);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  cursor:pointer;
+  transition:.2s;
+}
+
+.btn:hover{
+  transform:scale(1.1);
+  background:rgba(255,255,255,.4);
+}
+
+.play{
+  width:60px;
+  height:60px;
+  background:#fff;
+  color:#000;
+}
+
+.extras{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-top:15px;
+}
+
+.fav{
+  cursor:pointer;
+  font-size:20px;
+  transition:.2s;
+}
+
+.fav:hover{
+  color:#ff4d6d;
+}
+
+.volume{
+  width:120px;
+  height:5px;
+  background:rgba(255,255,255,.3);
+  border-radius:10px;
+  overflow:hidden;
+}
+
+.volume span{
+  width:65%;
+  height:100%;
+  display:block;
+  background:#fff;
+}
+
+.queue{
+  font-size:14px;
+  opacity:.8;
+}
+</style>
+</head>
+
+<body>
+
+<div class="player">
+
+  <div class="album">
+    <div class="now-playing">Now Playing</div>
+  </div>
+
+  <div class="song">
+    <h3>Perfect</h3>
+    <p>Ed Sheeran</p>
+  </div>
+
+  <div class="time">
+    <span>1:32</span>
+    <span>3:45</span>
+  </div>
+
+  <div class="progress">
+    <span></span>
+  </div>
+
+  <div class="controls">
+    <div class="btn">⏮</div>
+    <div class="btn play">▶</div>
+    <div class="btn">⏭</div>
+  </div>
+
+  <div class="extras">
+    <div class="fav">❤️</div>
+    <div class="queue">🎵 Queue</div>
+    <div class="volume">
+      <span></span>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
